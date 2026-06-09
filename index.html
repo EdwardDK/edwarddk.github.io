@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edward Doubovik</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --text-main: #111111;
+            --text-muted: #555555;
+            --accent-blue: #00356b; /* Traditional academic navy */
+            --border: #dddddd;
+            --max-width: 750px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        /* Profile Layout: Text on Left, Picture on Right */
+        .profile-section {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .profile-text {
+            flex: 1;
+        }
+
+        .profile-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .profile-text p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .profile-image {
+            flex-shrink: 0;
+        }
+
+        .profile-image img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 4px;
+            border: 1px solid var(--border);
+        }
+
+        /* Social Icons Link Row */
+        .links-row {
+            display: flex;
+            gap: 15px;
+            font-size: 0.95rem;
+            margin-top: 10px;
+        }
+
+        .links-row a {
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .links-row a:hover {
+            color: var(--accent-blue);
+            text-decoration: none;
+        }
+
+        /* Layout Dividers & Headings */
+        section {
+            margin-bottom: 35px;
+        }
+
+        h2.section-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-main);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        /* Clean List Formats */
+        ul.clean-list {
+            list-style: none;
+        }
+
+        ul.clean-list li {
+            margin-bottom: 15px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+
+        .item-date {
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        .item-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 2px;
+        }
+
+        .item-meta {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            font-style: italic;
+            margin-top: 2px;
+        }
+
+        footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Responsive stack for mobile views */
+        @media (max-width: 600px) {
+            .profile-section {
+                flex-direction: column-reverse;
+                gap: 20px;
+            }
+            .profile-image img {
+                width: 120px;
+                height: 120px;
+            }
+            .item-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Intro Profile Header Section -->
+        <div class="profile-section">
+            <div class="profile-text">
+                <h1>Edward Doubovik</h1>
+                <p>
+                    I am a high school student focused on computer science, mathematics, and machine learning. I am currently aspiring towards quantitative finance, with specific interests in algorithmic trading and time-series data analysis.
+                </p>
+                
+                <div class="links-row">
+                    <a href="https://github.com/EdwardDK" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/edward-doubovik-506661365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="mailto:edwarddoubovik42.email@example.com"><i class="fas fa-envelope"></i> Email</a>
+                </div>
+            </div>
+            
+            <div class="profile-image">
+                <!-- Replace 'headshot.jpg' with the actual path to your photo -->
+                <img src="https://media.licdn.com/dms/image/v2/D4E03AQFWqIVfTt8o7g/profile-displayphoto-crop_800_800/B4EZ5R0uaYI0AI-/0/1779489238378?e=1782345600&v=beta&t=wHgx8ySDZ9Rl8C5qn_qKpBGtwByZYlhirXY8CbmHsss" alt="Edward Doubovik">
+            </div>
+        </div>
+
+        <!-- Accomplishments / Recognition Section -->
+        <section id="achievements">
+            <h2 class="section-title">Key Recognition</h2>
+            <ul class="clean-list">
+                <li>
+                    <div class="item-header">
+                        <span>First Place, Medical and Health Sciences &bull; CT STEM Fair</span>
+                        <span class="item-date">May 2026</span>
+                    </div>
+                    <div class="item-desc">
+                        Awarded top honors for creating an AI pipeline that would recognize and correct wrist rehabilitation excercises within 0.08 seconds with 91% acccuracy.
+                    </div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <span>Competitive Mathematics</span>
+                        <span class="item-date">Active</span>
+                    </div>
+                    <div class="item-desc">
+                        Participating in high school mathematical Olympiads (AMC 10/12) and logic-driven algorithmic problem-solving.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Projects List Section -->
+        <section id="projects">
+            <h2 class="section-title">Selected Projects</h2>
+            <ul class="clean-list">
+                <li>
+                    <div class="item-header">
+                        <span><a href="https://github.com/EdwardDK/ML_RecessionForecast" target="_blank">Future Recession Macroeconimic Forecast Model </a></span>
+                        <span class="item-date">Python / ML</span>
+                    </div>
+                    <div class="item-desc">
+                        Developed a system that would look at unemployment, CPI, yields, consumer confidence, industrial production, and other recession indicators and then predict the chance of a recession in the next six months.
+                    </div>
+                    <div class="item-meta">Metrics: Precision-Recall curve; Sahm Rule indicator chart</div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <span><a href="https://github.com/EdwardDK/ML_WristRehab" target="_blank">Physical Therapy Computer Vision Rehabilitation System</a></span>
+                        <span class="item-date">Python / ML</span>
+                    </div>
+                    <div class="item-desc">
+                        The core processing engine behind the CT STEM project. Coordinates joint spatial positioning vectors dynamically via specialized image arrays.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Technical Tools Summary Section -->
+        <section id="skills">
+            <h2 class="section-title">Technical Skills</h2>
+            <ul class="clean-list">
+                <li><strong>Languages:</strong> Python, C++, R</li>
+                <li><strong>Frameworks & Tools:</strong> NumPy, Pandas, PyTorch, OpenCV, Git, Tensorflow, Linux / WSL</li>
+            </ul>
+        </section>
+
+        <!-- Dynamic Update Footer -->
+        <footer>
+            <p>Last updated: June 2026</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
