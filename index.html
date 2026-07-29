@@ -128,7 +128,47 @@
         .item-header {
             display: flex;
             justify-content: space-between;
+            align-items: center;
             font-weight: 600;
+        }
+
+        .item-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        /* Winner Badge Styling */
+        .badge-winner {
+            background-color: #d97706;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            vertical-align: middle;
+        }
+
+        /* WIP Badge Styling */
+        .badge-wip {
+            background-color: #2563eb;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            vertical-align: middle;
         }
 
         .item-date {
@@ -171,6 +211,8 @@
             }
             .item-header {
                 flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
             }
         }
     </style>
@@ -184,7 +226,7 @@
             <div class="profile-text">
                 <h1>Edward Doubovik</h1>
                 <p>
-                    I am a high school student focused on computer science, mathematics, and machine learning. I am currently aspiring towards quantitative finance, with specific interests in algorithmic trading and time-series data analysis.
+                    I am a high school student focused on computer science, mathematics, and engineering. I am currently aspiring towards quantitative finance, with specific interests in algorithmic trading and time-series data analysis; however, I am open to other research topics such as bioengineering.
                 </p>
                 
                 <div class="links-row">
@@ -195,8 +237,7 @@
             </div>
             
             <div class="profile-image">
-                <!-- Replace 'headshot.jpg' with the actual path to your photo -->
-                <img src="https://media.licdn.com/dms/image/v2/D4E03AQFWqIVfTt8o7g/profile-displayphoto-crop_800_800/B4EZ5R0uaYI0AI-/0/1779489238378?e=1782345600&v=beta&t=wHgx8ySDZ9Rl8C5qn_qKpBGtwByZYlhirXY8CbmHsss" alt="Edward Doubovik">
+                <img src="https://edwarddk.github.io/edwarddk/1785287662202.png" alt="Edward Doubovik">
             </div>
         </div>
 
@@ -210,16 +251,16 @@
                         <span class="item-date">May 2026</span>
                     </div>
                     <div class="item-desc">
-                        Awarded top honors for creating an AI pipeline that would recognize and correct wrist rehabilitation excercises within 0.08 seconds with 91% acccuracy.
+                        Awarded top honors for creating an AI pipeline that would recognize and correct wrist rehabilitation exercises within 0.08 seconds with 91% accuracy.
                     </div>
                 </li>
                 <li>
                     <div class="item-header">
-                        <span>Competitive Mathematics</span>
+                        <span><a href="https://www.youtube.com/channel/UCBL7Y-DIdHojQxYJN3wmGPg" target="_blank">Tech Podcast Host & Producer</a></span>
                         <span class="item-date">Active</span>
                     </div>
                     <div class="item-desc">
-                        Participating in high school mathematical Olympiads (AMC 10/12) and logic-driven algorithmic problem-solving.
+                        Hosting and producing episodes discussing emerging technology, artificial intelligence, software engineering, and industry trends.
                     </div>
                 </li>
             </ul>
@@ -231,22 +272,38 @@
             <ul class="clean-list">
                 <li>
                     <div class="item-header">
-                        <span><a href="https://github.com/EdwardDK/ML_RecessionForecast" target="_blank">Future Recession Macroeconimic Forecast Model </a></span>
+                        <div class="item-title-wrapper">
+                            <span><a href="https://github.com/EdwardDK/ML_WristRehab" target="_blank">Physical Therapy Computer Vision Rehabilitation System</a></span>
+                            <span class="badge-winner"><i class="fas fa-trophy"></i> Winner</span>
+                        </div>
+                        <span class="item-date">Python / ML</span>
+                    </div>
+                    <div class="item-desc">
+                        The core processing engine behind the CT STEM project. Coordinates joint spatial positioning vectors dynamically via specialized image arrays. Achieved 91% accuracy within 0.08 seconds.
+                    </div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <div class="item-title-wrapper">
+                            <span><a href="https://github.com/EdwardDK/Clipboard-" target="_blank">Clipboard+</a></span>
+                            <span class="badge-wip"><i class="fas fa-spinner"></i> In Progress</span>
+                        </div>
+                        <span class="item-date">Rust / TypeScript</span>
+                    </div>
+                    <div class="item-desc">
+                        Built a private, local-first Windows clipboard manager that captures text changes, coalesces duplicate entries via SHA-256 hashing, and indexes history in SQLite for instant full-text search.
+                    </div>
+                    <div class="item-meta">Features: Tauri 2 command palette; hotkey trigger (Ctrl+Shift+V); zero network telemetry</div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <span><a href="https://github.com/EdwardDK/ML_RecessionForecast" target="_blank">Future Recession Macroeconomic Forecast Model</a></span>
                         <span class="item-date">Python / ML</span>
                     </div>
                     <div class="item-desc">
                         Developed a system that would look at unemployment, CPI, yields, consumer confidence, industrial production, and other recession indicators and then predict the chance of a recession in the next six months.
                     </div>
                     <div class="item-meta">Metrics: Precision-Recall curve; Sahm Rule indicator chart</div>
-                </li>
-                <li>
-                    <div class="item-header">
-                        <span><a href="https://github.com/EdwardDK/ML_WristRehab" target="_blank">Physical Therapy Computer Vision Rehabilitation System</a></span>
-                        <span class="item-date">Python / ML</span>
-                    </div>
-                    <div class="item-desc">
-                        The core processing engine behind the CT STEM project. Coordinates joint spatial positioning vectors dynamically via specialized image arrays.
-                    </div>
                 </li>
             </ul>
         </section>
@@ -255,14 +312,14 @@
         <section id="skills">
             <h2 class="section-title">Technical Skills</h2>
             <ul class="clean-list">
-                <li><strong>Languages:</strong> Python, C++, R</li>
-                <li><strong>Frameworks & Tools:</strong> NumPy, Pandas, PyTorch, OpenCV, Git, Tensorflow, Linux / WSL</li>
+                <li><strong>Languages:</strong> Python, C++, TypeScript</li>
+                <li><strong>Frameworks & Tools:</strong> React, NumPy, Pandas, PyTorch, OpenCV, Git, TensorFlow, Linux / WSL</li>
             </ul>
         </section>
 
         <!-- Dynamic Update Footer -->
         <footer>
-            <p>Last updated: June 2026</p>
+            <p>Last updated: July 2026</p>
         </footer>
 
     </div>
