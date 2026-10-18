@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edward Doubovik</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         :root {
             --text-main: #111111;
             --text-muted: #555555;
-            --accent-blue: #00356b; /* Traditional academic navy */
+            --accent-blue: #00356b;
             --border: #dddddd;
             --max-width: 750px;
         }
@@ -42,7 +42,6 @@
             padding: 50px 20px;
         }
 
-        /* Profile Layout: Text on Left, Picture on Right */
         .profile-section {
             display: flex;
             align-items: flex-start;
@@ -80,7 +79,6 @@
             border: 1px solid var(--border);
         }
 
-        /* Social Icons Link Row */
         .links-row {
             display: flex;
             gap: 15px;
@@ -100,7 +98,6 @@
             text-decoration: none;
         }
 
-        /* Layout Dividers & Headings */
         section {
             margin-bottom: 35px;
         }
@@ -116,7 +113,6 @@
             margin-bottom: 15px;
         }
 
-        /* Clean List Formats */
         ul.clean-list {
             list-style: none;
         }
@@ -139,7 +135,6 @@
             flex-wrap: wrap;
         }
 
-        /* Winner Badge Styling */
         .badge-winner {
             background-color: #d97706;
             color: #ffffff;
@@ -155,9 +150,23 @@
             vertical-align: middle;
         }
 
-        /* WIP Badge Styling */
         .badge-wip {
             background-color: #2563eb;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            padding: 2px 7px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            vertical-align: middle;
+        }
+
+        .badge-frozen {
+            background-color: #0891b2;
             color: #ffffff;
             font-size: 0.7rem;
             font-weight: 700;
@@ -199,7 +208,6 @@
             text-align: center;
         }
 
-        /* Responsive stack for mobile views */
         @media (max-width: 600px) {
             .profile-section {
                 flex-direction: column-reverse;
@@ -220,28 +228,27 @@
 <body>
 
     <div class="container">
-        
-        <!-- Intro Profile Header Section -->
+
         <div class="profile-section">
             <div class="profile-text">
                 <h1>Edward Doubovik</h1>
                 <p>
-                    I am a high school student focused on computer science, mathematics, and engineering. I am currently aspiring towards quantitative finance, with specific interests in algorithmic trading and time-series data analysis; however, I am open to other research topics such as bioengineering.
+                    I am a high school student focused on computer science, mathematics, and engineering. I am currently aspiring towards majoring in computer science, with interests in machine learning, quantitative finance, and bioengineering.
                 </p>
-                
+
                 <div class="links-row">
                     <a href="https://github.com/EdwardDK" target="_blank"><i class="fab fa-github"></i> GitHub</a>
                     <a href="https://www.linkedin.com/in/edward-doubovik-506661365/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://x.com/eddyd47" target="_blank"><i class="fab fa-x-twitter"></i> Twitter</a>
                     <a href="mailto:edwarddoubovik42.email@example.com"><i class="fas fa-envelope"></i> Email</a>
                 </div>
             </div>
-            
+
             <div class="profile-image">
                 <img src="https://edwarddk.github.io/edwarddk/1785287662202.png" alt="Edward Doubovik">
             </div>
         </div>
 
-        <!-- Accomplishments / Recognition Section -->
         <section id="achievements">
             <h2 class="section-title">Key Recognition</h2>
             <ul class="clean-list">
@@ -266,7 +273,6 @@
             </ul>
         </section>
 
-        <!-- Projects List Section -->
         <section id="projects">
             <h2 class="section-title">Selected Projects</h2>
             <ul class="clean-list">
@@ -285,8 +291,44 @@
                 <li>
                     <div class="item-header">
                         <div class="item-title-wrapper">
-                            <span><a href="https://github.com/EdwardDK/Clipboard-" target="_blank">Clipboard+</a></span>
+                            <span><a href="https://github.com/EdwardDK/Haptici" target="_blank">Stroke Survivor Wrist Rehabilitation using Haptic Feedback</a></span>
                             <span class="badge-wip"><i class="fas fa-spinner"></i> In Progress</span>
+                        </div>
+                        <span class="item-date">Python / C++</span>
+                    </div>
+                    <div class="item-desc">
+                        Expanding access to therapy by combining haptic feedback and IMU sensors to give real-time feedback on wrist exercise performance.
+                    </div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <div class="item-title-wrapper">
+                            <span>Whiteboard Tutor</span>
+                            <span class="badge-wip"><i class="fas fa-spinner"></i> In Progress</span>
+                        </div>
+                        <span class="item-date">TSX / Rust</span>
+                    </div>
+                    <div class="item-desc">
+                        Developing a web version and a desktop version of a whiteboard tutor where you can write out any problem and it shows you how to solve it step by step, drawing the pictures and diagrams along the way.
+                    </div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <div class="item-title-wrapper">
+                            <span>Wharton Youth Investment Competition Model</span>
+                            <span class="badge-wip"><i class="fas fa-spinner"></i> In Progress</span>
+                        </div>
+                        <span class="item-date">Python</span>
+                    </div>
+                    <div class="item-desc">
+                        Working with one of my school teams to create a prediction model for the Wharton Youth Investment Competition using quant scores and Monte Carlo simulation.
+                    </div>
+                </li>
+                <li>
+                    <div class="item-header">
+                        <div class="item-title-wrapper">
+                            <span><a href="https://github.com/EdwardDK/Clipboard-" target="_blank">Clipboard+</a></span>
+                            <span class="badge-frozen"><i class="fas fa-snowflake"></i> Frozen</span>
                         </div>
                         <span class="item-date">Rust / TypeScript</span>
                     </div>
@@ -308,7 +350,6 @@
             </ul>
         </section>
 
-        <!-- Technical Tools Summary Section -->
         <section id="skills">
             <h2 class="section-title">Technical Skills</h2>
             <ul class="clean-list">
@@ -317,9 +358,8 @@
             </ul>
         </section>
 
-        <!-- Dynamic Update Footer -->
         <footer>
-            <p>Last updated: July 2026</p>
+            <p>Last updated: September 2026</p>
         </footer>
 
     </div>
